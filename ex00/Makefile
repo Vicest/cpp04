@@ -3,6 +3,8 @@ NAME=main
 CLASS:=Animal.cpp
 CLASS+=Cat.cpp
 CLASS+=Dog.cpp
+CLASS+=WrongAnimal.cpp
+CLASS+=WrongCat.cpp
 HEAD:=$(CLASS:.cpp=.hpp)
 SRCS:=main.cpp
 OBJS:=$(SRCS:.cpp=.o)

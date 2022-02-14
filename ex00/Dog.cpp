@@ -24,11 +24,6 @@ Dog	&Dog::operator=(Dog const &dog)
 	return (*this);
 }
 
-std::string	Dog::getType(void) const
-{
-	return (this->_type);
-}
-
 void	Dog::makeSound(void) const
 {
 	std::cout << "Woof!" << std::endl;

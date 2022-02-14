@@ -3,8 +3,32 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
+#define ARR_SIZE 10
+
 int main(void)
 {
+	{
+		Animal	*zoo[ARR_SIZE];
+
+		for (int i = 0; i < ARR_SIZE; i++)
+		{
+			if (i < ARR_SIZE / 2)
+				zoo[i] = new Cat();
+			else
+				zoo[i] = new Dog();
+		}
+		for (int i = 0; i < ARR_SIZE; i++)
+		{
+			zoo[i]->makeSound();
+			if (i < ARR_SIZE / 2)
+				delete zoo[i];
+			else
+				delete zoo[i];
+		}
+		//delete [] zoo; //This is wrong.
+		//delete [] *zoo; //Wrong as well.
+		system("leaks -q main");
+	}
 	{
 		const Cat*	i = new Cat();
 		const Dog*	j = new Dog();

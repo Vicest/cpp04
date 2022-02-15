@@ -1,7 +1,7 @@
 NAME=main
 
-CLASS:=AMateria.cpp
-CLASS+=MateriaSource.cpp
+CLASS:=MateriaSource.cpp
+CLASS+=AMateria.cpp
 CLASS+=Ice.cpp
 CLASS+=Cure.cpp
 CLASS+=Character.cpp

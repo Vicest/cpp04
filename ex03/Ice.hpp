@@ -5,7 +5,8 @@
 class Ice : public AMateria
 {
 	public:
-		virtual AMateria*	clone(void) const = 0;
-		virtual void		use(ICharacter& target);
+		Ice(void);
+		AMateria*	clone(void) const;
+		void		use(ICharacter& target);
 };
 #endif

@@ -1,10 +1,17 @@
 #include "Ice.hpp"
+#include <iostream>
 
-AMateria	*Ice::Clone(void)
+Ice::Ice(void)
+{
+	this->_type = "ice";
+}
+
+AMateria	*Ice::clone(void) const
 {
 	return (new Ice(*this));
 }
-void	use(ICharacter &target)
+
+void	Ice::use(ICharacter &target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName()
 		<< " *" << std::endl;

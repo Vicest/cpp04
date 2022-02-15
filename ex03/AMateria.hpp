@@ -3,13 +3,15 @@
 # include <string>
 # include "ICharacter.hpp"
 
+class ICharacter;
+
 class AMateria
 {
 protected:
-	const std::string	_type;
+	std::string	_type;
 public:
 	AMateria(void);
-	AMateria(std::string const &type);
+	AMateria(std::string &type);
 	AMateria(AMateria const &amateria);
 	~AMateria(void);
 	AMateria	&operator=(AMateria const &amateria);

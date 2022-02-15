@@ -5,7 +5,8 @@
 class Cure : public AMateria
 {
 	public:
-		virtual AMateria*	clone(void) const = 0;
-		virtual void		use(ICharacter& target);
+		Cure(void);
+		AMateria*	clone(void) const;
+		void		use(ICharacter &target);
 };
 #endif
